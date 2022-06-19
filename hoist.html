@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+
+<script>
+x = 5; // Assign 5 to x
+
+elem = document.getElementById("demo"); // Find an element 
+elem.innerHTML = x;           // Display x in the element
+
+var x; // Declare x
+</script>
+<!--initialization--->
+<p id="demo1"></p>
+
+<script>
+var x = 5; // Initialize x
+var y = 7; // Initialize y
+
+elem = document.getElementById("demo1"); // Find an element 
+elem.innerHTML = x + " " + y;       // Display x and y
+
+</script>
+
+<!--initialization are not hoisted-->
+<p id="demo2"></p>
+<script>
+var p = 5;  // Initialize p
+
+elem = document.getElementById("demo2");      // Find an element 
+elem.innerHTML = "p is " + x + " and q is " + y;  // Display p and q
+
+var q = 7;  // Initialize q
+</script>
+</body>
+</body>
+</html> 

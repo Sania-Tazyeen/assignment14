@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>JavaScript Iterables</h2>
+
+<p id="demo"></p>
+
+<script>
+// Create an Object
+myNumbers = {};
+
+// Make it Iterable
+myNumbers[Symbol.iterator] = function() {
+  let n = 0;
+  done = false;
+  return {
+    next() {
+      n += 5;
+      if (n == 100) {done = true}
+      return {value:n, done:done};
+    }
+  };
+}
+
+let text = ""
+for (const num of myNumbers) {
+  text += num +"<br>"
+}
+
+document.getElementById("demo").innerHTML = text;
+</script>
+<!--Js sets-->
+<h2>JavaScript Sets</h2>
+<p>Create a Set from an Array:</p>
+
+<p id="demo1"></p>
+
+<script>
+
+// Create a Set
+const letters = new Set(["a","b","c"]);
+
+// Display set.size
+document.getElementById("demo1").innerHTML = letters.size;
+</script>
+
+
+<!--variables-->
+<p>Add variables to a Set:</p>
+
+<p id="demo2"></p>
+
+<script>
+// Create a Set
+const letter = new Set();
+
+// Create Variables
+const p = "p";
+const q = "q";
+const r = "r";
+
+// Add the Variables to the Set
+letter.add(p);
+letter.add(q);
+letter.add(r);
+
+// Display set.size
+document.getElementById("demo2").innerHTML = letter.size;
+</script>
+
+
+<!--Add method in sets-->
+<h2>adding method</h2>
+<p id ="demo3"></p>
+
+<script>
+// Create a new Set
+const alphabets = new Set(["a","b","c"]);
+
+// Add a new Element
+alphabets.add("d");
+alphabets.add("e");
+
+// Display set.size
+document.getElementById("demo3").innerHTML = alphabets.size;
+</script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Math objects</title>
+</head>
+<body>
+	<!--Math constants-->
+<h1>JavaScript Math constants</h1>
+<p>Math.E        // returns Euler's number</p>
+<p>Math.SQRT2    // returns the square root of 2</p>
+<p>Math.LN2      // returns the natural logarithm of 2</p>
+<p>Math.LN10     // returns the natural logarithm of 10</p>
+<p>Math.LOG10E   // returns base 10 logarithm of E</p>
+
+<p id="demo"></p>
+
+<script>
+document.getElementById("demo").innerHTML = 
+"<p><b>Math.E:</b> " + Math.E + "</p>" +
+"<p><b>Math.PI:</b> " + Math.PI + "</p>" +
+"<p><b>Math.SQRT2:</b> " + Math.SQRT2 + "</p>" +
+"<p><b>Math.SQRT1_2:</b> " + Math.SQRT1_2 + "</p>" +
+"<p><b>Math.LN2:</b> " + Math.LN2 + "</p>" +
+"<p><b>Math.LN10:</b> " + Math.LN10 + "</p>" +
+"<p><b>Math.LOG2E:</b> " + Math.LOG2E + "</p>" +
+"<p><b>Math.Log10E:</b> " + Math.LOG10E + "</p>";
+</script>
+
+<!--Math methods-->
+<!--Math random-->
+<p>Math.round(x) returns the value of x rounded to its nearest integer:</p>
+
+<p id="demo1"></p>
+
+<script>
+document.getElementById("demo1").innerHTML = Math.round(1.6);
+</script>
+
+<!--Math ceil()-->
+<p>Math.ceil() rounds a number up to its nearest integer:</p>
+
+<p id="demo2"></p>
+
+<script>
+document.getElementById("demo2").innerHTML = Math.ceil(5.3);
+</script>
+
+<!--Math floor-->
+<p>Math.floor(x) returns the value of x rounded down to its nearest integer:</p>
+
+<p id="demo3"></p>
+
+<script>
+document.getElementById("demo3").innerHTML = Math.floor(1.9);
+</script>
+<!--Math trunc-->
+<p>Math.trunc(x) returns the integer part of x:</p>
+
+<p id="demo4"></p>
+
+<script>
+document.getElementById("demo4").innerHTML = Math.trunc(9.2);
+</script>
+<!--Math sign-->
+<p>Math.sign(x) returns if x is negative, null or positive:</p>
+
+<p id="demo5"></p>
+
+<script>
+document.getElementById("demo5").innerHTML = Math.sign(-8);
+</script>
+
+</body>
+</html>

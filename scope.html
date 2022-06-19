@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>JavaScript scope</title>
+</head>
+<body>
+
+
+<p id="demo1"></p>
+
+<p id="demo2"></p>
+
+<script>
+myFunction();
+
+function myFunction() {
+  let carName = "Volvo";
+  document.getElementById("demo1").innerHTML = typeof carName + " " + carName;
+}
+
+document.getElementById("demo2").innerHTML = typeof carName;
+</script>
+
+<!--global variable-->
+
+<p>A GLOBAL variable can be accessed from any script or function.</p>
+
+<p id="demo2"></p>
+
+<script>
+let carName = "Volvo";
+myFunction();
+
+function myFunction() {
+  document.getElementById("demo2").innerHTML = "I can display " + carName;
+}
+</script>
+
+</body>
+</html>
